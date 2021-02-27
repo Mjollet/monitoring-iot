@@ -1,0 +1,17 @@
+.footer {
+  background: khaki;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.float {
+  color: #161A6C;
+  float: right;
+  margin-bottom: 0;
+}
