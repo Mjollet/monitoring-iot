@@ -1,0 +1,29 @@
+<div class="displayed">
+  <!-- header -->
+  <div class="toolbar" color="primary">
+    <div class="nav">
+      <button mat-icon-button (click)="navOpen()" >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <!-- logo -->
+    <div class="middle">
+      <a class="navbar-item">
+        <img class="logo" src="assets/logo_upciti.png">
+      </a>
+    </div>
+    <!--  More information  -->
+    <div class="user-cercle">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="status">
+        <mat-icon class="icon"><span class="material-icons">
+          account_circle
+          </span></mat-icon>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item > About us </button>
+          <button mat-menu-item > Contacts </button>
+        </mat-menu>
+      </button>
+    </div>
+
+  </div>
+</div>
