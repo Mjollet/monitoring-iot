@@ -10,12 +10,18 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MaterialModule} from './material.module';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { DevicesComponent } from './views/devices/devices.component';
+import { DeviceDetailComponent } from './views/device-detail/device-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    DevicesComponent,
+    DeviceDetailComponent
   ],
   imports: [
     BrowserModule,
