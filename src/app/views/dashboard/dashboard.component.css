@@ -1,0 +1,58 @@
+.jumbotron{
+  background-image: url("/assets/b.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+ /* background-attachment: fixed;
+  background-size: auto;*/
+  position: relative;
+  min-height: 700px;
+  z-index: -1
+}
+
+.text-white{
+  padding: 20px;
+  font-weight: bold;
+  color : #f7f7f7;
+  margin-right: auto;
+  margin-left: auto;
+  position: flex;
+  width: 100%;
+  text-align: center
+}
+
+.flexcontainer{
+  margin-bottom: 45px;
+  margin-top: 250px;
+}
+
+.mat-card{
+  margin-left: 20px;
+}
+
+.mat-card-content{
+  text-align: center;
+}
+
+.mat-card img{
+  width: 210px;
+  height: 200px;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url("/assets/knight_unsplash.jpg");
+  background-size: cover;
+}
+
+
+.content {
+  max-height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
