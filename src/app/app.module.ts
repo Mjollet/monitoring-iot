@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import {MaterialModule} from './material.module';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { DevicesComponent } from './views/devices/devices.component';
 import { DeviceDetailComponent } from './views/device-detail/device-detail.component';
+import { DevicesTableComponent } from './components/devices-table/devices-table.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { DeviceDetailComponent } from './views/device-detail/device-detail.compo
     FooterComponent,
     DashboardComponent,
     DevicesComponent,
-    DeviceDetailComponent
+    DeviceDetailComponent,
+    DevicesTableComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { DeviceDetailComponent } from './views/device-detail/device-detail.compo
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
