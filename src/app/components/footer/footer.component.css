@@ -12,6 +12,8 @@
 
 .float {
   color: #161A6C;
-  float: right;
+  width: 100%;
   margin-bottom: 0;
+  margin-right: 10px;
+  margin-top: 10px;
 }

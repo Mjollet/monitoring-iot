@@ -40,25 +40,15 @@
           <h3 matLine>Analytics</h3>
           <p matLine>Devices details</p>
         </a>
-        <!--<a
-          id="form"
-          mat-list-item
-          [routerLink]="['./form']"
-          (click)="sidenav.close()"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}"
-        >
-          <mat-icon matListAvatar style="font-size: 28px;">add</mat-icon>
-          <h3 matLine>Add a device</h3>
-          <p matLine>form</p>
-        </a>-->
+
       </mat-nav-list>
     </div>
 
   </mat-sidenav>
   <!-- routes will be rendered here -->
   <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </mat-sidenav-container>
 
-<app-footer></app-footer>
+
 

@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {DeviceModel} from '../../services/device.model';
 import {MatTableDataSource} from '@angular/material/table';
 import {DevicesService} from '../../services/devices.service';
-import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-devices-table',
@@ -12,14 +11,10 @@ import {map} from 'rxjs/operators';
 export class DevicesTableComponent implements OnInit {
   rows: DeviceModel [];
   data;
-  columns = [
+  displayedColumns = [
     'serial_number',
     'status',
-    'last_seen_at',
     'mac_wifi',
-    'sim_id',
-    'voltage',
-    'connection_type',
     'url',
   ];
 
@@ -43,6 +38,10 @@ export class DevicesTableComponent implements OnInit {
         console.log(this.data);
       }
     );
+  }
+
+  getNumber(element, fractionDigits: number): string {
+    return Number(element).toLocaleString('fr-FR', {minimumFractionDigits: fractionDigits, maximumFractionDigits: fractionDigits});
   }
 
 }
