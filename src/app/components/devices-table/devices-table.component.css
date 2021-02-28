@@ -1,7 +1,17 @@
 table {
   width: 100%;
 }
+
 .mat-header-cell , .mat-cell{
   text-align: center;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.filter{
+ margin-top: 15px;
 }
 
