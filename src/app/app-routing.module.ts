@@ -8,7 +8,7 @@ import {DeviceDetailComponent} from './views/device-detail/device-detail.compone
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'devices', component: DevicesComponent},
-  {path: 'devices/:id', component: DeviceDetailComponent},
+  {path: 'devices/:serial_number', component: DeviceDetailComponent},
   {path: '', redirectTo: 'devices', pathMatch: 'full'},
 ];
 

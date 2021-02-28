@@ -11,6 +11,7 @@ import {DevicesService} from '../../services/devices.service';
 export class DevicesTableComponent implements OnInit {
   rows: DeviceModel [];
   data;
+  selectedDevice?: DeviceModel;
   displayedColumns = [
     'serial_number',
     'status',
@@ -40,8 +41,9 @@ export class DevicesTableComponent implements OnInit {
     );
   }
 
-  getNumber(element, fractionDigits: number): string {
-    return Number(element).toLocaleString('fr-FR', {minimumFractionDigits: fractionDigits, maximumFractionDigits: fractionDigits});
+  onSelect(row: DeviceModel): void {
+    this.selectedDevice = row;
+    console.log(row);
   }
 
 }
