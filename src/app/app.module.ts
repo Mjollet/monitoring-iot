@@ -13,7 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MaterialModule} from './material.module';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { DevicesComponent } from './views/devices/devices.component';
-import { DeviceDetailComponent } from './views/device-detail/device-detail.component';
+import { DeviceDetailComponent } from './components/device-detail/device-detail.component';
 import { DevicesTableComponent } from './components/devices-table/devices-table.component';
 
 @NgModule({

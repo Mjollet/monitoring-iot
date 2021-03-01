@@ -1,16 +1,14 @@
 .footer {
-  background-color: whitesmoke;
-  color: #fff;
+  background-color: rgba(22, 26, 108, 0.4);
   position: fixed;
   bottom: 0;
-  height: 45px;
+  height: 55px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .float {
+  font-weight: bold;
   color: #161A6C;
   width: 100%;
   margin-bottom: 0;
