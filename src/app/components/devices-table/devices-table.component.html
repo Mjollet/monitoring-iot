@@ -16,27 +16,56 @@
       </ng-container>
 
       <ng-container matColumnDef="status">
-        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <th mat-header-cell *matHeaderCellDef> Status</th>
         <td mat-cell *matCellDef="let element"> {{element.status}} </td>
       </ng-container>
 
       <ng-container matColumnDef="mac_wifi">
-        <th mat-header-cell *matHeaderCellDef> Spot Wifi </th>
+        <th mat-header-cell *matHeaderCellDef> Spot Wifi</th>
         <td mat-cell *matCellDef="let element"> {{element.mac_wifi}} </td>
       </ng-container>
 
       <ng-container matColumnDef="url">
-        <th mat-header-cell *matHeaderCellDef> More information </th>
+        <th mat-header-cell *matHeaderCellDef> More information</th>
         <td mat-cell *matCellDef="let element"> {{element.url}} </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-          (click)="onSelect(row)"
-          routerLink="{{row.serial_number}}"></tr>
+          [class.selected]="row === selectedDevice"
+          (click)="onSelect(row)">
+
+      </tr>
     </table>
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
   </div>
 
+
+  <div class="details-container" *ngIf="selectedDevice">
+  <mat-card>
+      <mat-card-title>
+        <h1>Get details about {{selectedDevice.serial_number}}</h1>
+        <h1 style="color: green"> {{selectedDevice.status}} </h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{selectedDevice.last_seen_at}}
+      </mat-card-subtitle>
+      <img mat-card-image src="./assets/capteur-upciti.jpg" alt="">
+      <mat-card-content>
+        <span>Wifi : {{selectedDevice.mac_wifi}}</span>
+        <br>
+        <span>Voltage : {{selectedDevice.voltage}}</span>
+        <br>
+        <span>Url : {{selectedDevice.url}}</span>
+        <br>
+        <span>Connection type : {{selectedDevice.connection_type}}</span>
+        <br>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button>Back</button>
+        <button mat-raised-button>Ok</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 
 </div>

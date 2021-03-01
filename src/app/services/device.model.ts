@@ -1,4 +1,5 @@
 export interface DeviceModel {
+  serial_number: string;
   url: string;
   status: string;
   last_seen_at: string;
@@ -6,5 +7,4 @@ export interface DeviceModel {
   mac_wifi: string;
   sim_id: string;
   voltage: number;
-  serial_number: string;
 }

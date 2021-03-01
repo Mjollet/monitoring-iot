@@ -10,6 +10,7 @@ import {MatPaginator} from '@angular/material/paginator';
   styleUrls: ['./devices-table.component.css']
 })
 export class DevicesTableComponent implements OnInit{
+
   rows: DeviceModel [];
   dataSource;
   selectedDevice?: DeviceModel;
