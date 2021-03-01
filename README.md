@@ -1,6 +1,7 @@
 # Upciti
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+Start the project with `npm install` .
 
 ## Development server
 
