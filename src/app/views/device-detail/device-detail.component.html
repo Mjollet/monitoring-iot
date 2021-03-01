@@ -1,21 +1,22 @@
-<div class="main-container">
+<div class="details-container" *ngIf="row">
   <mat-card>
     <mat-card-title>
-      <h1>{{device.serial_number}} :  {{device.status}}</h1>
+      <h1>Get details about {{row.serial_number}}</h1>
+      <h1 style="color: green"> {{row.status}} </h1>
     </mat-card-title>
     <mat-card-subtitle>
-      {{device.last_seen_at}}
+      {{row.last_seen_at}}
     </mat-card-subtitle>
-    <img mat-card-image src="./asse" alt="">
+    <img mat-card-image src="./assets/capteur-upciti.jpg" alt="">
     <mat-card-content>
-      {{device.mac_wifi}}
-      {{device.voltage}}
-      {{device.url}}
-      {{device.connection_type}}
+      <span>Wifi : {{row.mac_wifi}}</span>
+      <br>
+      <span>Voltage : {{row.voltage}} V</span>
+      <br>
+      <span>Url : <a target="_blank" href="this.row.url">{{row.url}}</a></span>
+      <br>
+      <span>Connection type : {{row.connection_type}}</span>
+      <br>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>Back</button>
-      <button mat-button>Ok</button>
-    </mat-card-actions>
   </mat-card>
 </div>

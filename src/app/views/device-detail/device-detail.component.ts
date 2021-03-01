@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, ParamMap} from '@angular/router';
-import { Location } from '@angular/common';
-import {DevicesService} from '../../services/devices.service';
+import {Component, Input, OnInit} from '@angular/core';
+
 import {DeviceModel} from '../../services/device.model';
-import {Subscription} from 'rxjs';
+
 
 @Component({
   selector: 'app-device-detail',
@@ -11,15 +9,10 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./device-detail.component.css']
 })
 export class DeviceDetailComponent implements OnInit {
-  device;
-  serial;
-  sub: Subscription;
 
-  constructor(
-    private route: ActivatedRoute,
-    private deviceService: DevicesService,
-    private location: Location
-  ) { }
+  @Input() row: DeviceModel;
+
+  constructor() { }
 
   ngOnInit(): void {
 

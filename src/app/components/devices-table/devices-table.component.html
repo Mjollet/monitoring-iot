@@ -8,7 +8,7 @@
   </div>
 
   <div class="table-container mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="row">
 
       <ng-container matColumnDef="serial_number">
         <th mat-header-cell *matHeaderCellDef> No. serial</th>
@@ -41,31 +41,6 @@
   </div>
 
 
-  <div class="details-container" *ngIf="selectedDevice">
-  <mat-card>
-      <mat-card-title>
-        <h1>Get details about {{selectedDevice.serial_number}}</h1>
-        <h1 style="color: green"> {{selectedDevice.status}} </h1>
-      </mat-card-title>
-      <mat-card-subtitle>
-        {{selectedDevice.last_seen_at}}
-      </mat-card-subtitle>
-      <img mat-card-image src="./assets/capteur-upciti.jpg" alt="">
-      <mat-card-content>
-        <span>Wifi : {{selectedDevice.mac_wifi}}</span>
-        <br>
-        <span>Voltage : {{selectedDevice.voltage}}</span>
-        <br>
-        <span>Url : {{selectedDevice.url}}</span>
-        <br>
-        <span>Connection type : {{selectedDevice.connection_type}}</span>
-        <br>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button>Back</button>
-        <button mat-raised-button>Ok</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
+  <app-device-detail [row]="selectedDevice"></app-device-detail>
 
 </div>
