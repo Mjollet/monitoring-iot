@@ -24,21 +24,9 @@
           (click)="sidenav.close()"
           routerLinkActive="active"
         >
-          <mat-icon matListAvatar>table_chart</mat-icon>
+          <mat-icon matListAvatar>analytics</mat-icon>
           <h3 matLine>Devices table</h3>
-          <p matLine>All devices</p>
-        </a>
-
-        <a
-          id="data"
-          mat-list-item
-          [routerLink]="['./devices/:id']"
-          (click)="sidenav.close()"
-          routerLinkActive="active"
-        >
-          <mat-icon matListAvatar style="font-size: 28px;">analytics</mat-icon>
-          <h3 matLine>Analytics</h3>
-          <p matLine>Devices details</p>
+          <p matLine>device details</p>
         </a>
 
       </mat-nav-list>
