@@ -5,6 +5,8 @@
   height: 55px;
   width: 100%;
   display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .float {

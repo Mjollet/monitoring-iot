@@ -7,6 +7,7 @@ import {MatSidenav} from '@angular/material/sidenav';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  // link between the burger header and the navbar
   @Output() navToggle: EventEmitter<any> = new EventEmitter<boolean>();
   sidenav: MatSidenav;
 

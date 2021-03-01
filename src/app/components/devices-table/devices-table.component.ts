@@ -31,12 +31,14 @@ export class DevicesTableComponent implements OnInit{
     'Sim id',
     'Voltage',
   ];
+  // pagination of devices displayed
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
 
   constructor(private deviceService: DevicesService) {
   }
 
+  // subscribe to devices list
   ngOnInit(): void {
     this.deviceService.getDevices().subscribe(result => {
         this.dataSource = new MatTableDataSource(result);
@@ -45,11 +47,13 @@ export class DevicesTableComponent implements OnInit{
     );
   }
 
+  // selection of a particular device for details showing
   onSelect(row: DeviceModel): void {
     this.selectedDevice = row;
     console.log(row);
   }
 
+  // filter desvices results
   applyFilter(event: Event): void {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

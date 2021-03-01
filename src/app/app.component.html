@@ -1,5 +1,7 @@
+<!-- Header with burger acces to navigation -->
 <app-header (navToggle)="sidenav.toggle()"></app-header>
 
+<!-- Sidebar for navigation between two screens -->
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side">
     <div>
@@ -35,7 +37,7 @@
   </mat-sidenav>
   <!-- routes will be rendered here -->
   <router-outlet></router-outlet>
- <app-footer></app-footer>
+<!-- <app-footer></app-footer>-->
 </mat-sidenav-container>
 
 

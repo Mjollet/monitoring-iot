@@ -7,7 +7,7 @@ import {DevicesComponent} from './views/devices/devices.component';
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'devices', component: DevicesComponent},
-  {path: '', redirectTo: 'devices', pathMatch: 'full'},
+  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
 ];
 
 @NgModule({

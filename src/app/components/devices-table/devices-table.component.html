@@ -7,6 +7,7 @@
     </mat-form-field>
   </div>
 
+  <!-- Acces to all devices -->
   <div class="table-container mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" class="row">
 
@@ -40,7 +41,7 @@
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
   </div>
 
-
+ <!-- Acces to device selected section -->
   <app-device-detail [row]="selectedDevice"></app-device-detail>
 
 </div>
